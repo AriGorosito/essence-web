@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENCE | La elegancia de lo esencial</title>
+  <meta name="description" content="ESSENCE: ropa pensada para combinar comodidad, elegancia y estilo. Colecciones de Invierno, Primavera y Verano.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-header">
+    <div class="banner-background">
+      <img src="Banner Essence.png" alt="Banner Tienda" class="banner-img">
+    </div>
+
+
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
+        <li><a href="#catalogo">Catalogo</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <input type="text" id="input-buscador" placeholder="Buscar producto..." class="search-bar" onkeyup="buscarProductos(event)">
+        <div class="cuenta-wrap">
+          <button class="cuenta-btn" id="btn-cuenta" type="button" aria-haspopup="true" aria-expanded="false">
+            <span aria-hidden="true">👤</span><span class="cuenta-nombre" id="cuenta-nombre">Ingresar</span>
+          </button>
+          <div class="cuenta-menu" id="cuenta-menu" hidden>
+            <div class="cuenta-menu-head">Sesión iniciada como<strong id="cuenta-menu-nombre"></strong></div>
+            <button type="button" id="menu-opinion">⭐ Mi opinión</button>
+            <button type="button" id="menu-salir">Cerrar sesión</button>
+          </div>
+        </div>
+        <button class="cart-btn" aria-label="Carrito de compras" onclick="abrirCarrito()">
+        🛒<span id="cart-count">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <section id="Inicio" class="Inicio"> 
+    <div class="inicio-texto">
+      <h1>Encontrá tu estilo en ESSENCE</h1>
+      <P>La elegancia de lo esencial</P>
+      <p> 
+        Descubrí nuestra colección de ropa pensada para combinar comodidad, elegancia y estilo
+        en cada ocasión. </p>
+    </div>
+    <div class="colecciones-grid">
+
+  
+  <div class="coleccion-card" onclick="abrirColeccion()">
+    <div class="coleccion-imagen-wrapper">
+      <img src="coleccion Invierno.jpg" alt="Colección Invierno">
+    </div>
+    <div class="coleccion-info">
+      <h3>Colección Invierno</h3>
+      <span class="btn-coleccion">Ver Colección</span>
+    </div>
+  </div>
+
+  <div class="coleccion-card" onclick="abrirColeccionPrimavera()">
+    <div class="coleccion-imagen-wrapper">
+      <img src="coleccion primavera.png" alt="Colección Primavera">
+    </div>
+    <div class="coleccion-info">
+      <h3>Colección Primavera</h3>
+      <span class="btn-coleccion">Ver Colección</span>
+    </div>
+  </div>
+
+
+  <div class="coleccion-card" onclick="abrirColeccionVerano()">
+    <div class="coleccion-imagen-wrapper">
+      <span class="badge-nueva">NUEVA</span>
+      <img src="coleccion verano.jpg" alt="Colección Verano">
+    </div>
+    <div class="coleccion-info">
+      <h3>Colección Verano</h3>
+      <span class="btn-coleccion">Ver Colección</span>
+    </div>
+  </div>
+
+</div>
+  </section>
+ 
+<section id="ofertas" class="seccion-ofertas">
+  <h2 style="text-align: center; color: #403b46; margin: 40px 0 20px 0;">Ofertas Especiales</h2>
+
+  <div class="ofertas-container">
+    <div class="ofertas-slider">
+
+      <!-- TARJETA 1 -->
+      <div class="oferta-card">
+        <span class="badge-oferta">OFERTA 20% OFF</span>
+        <img src="chaqueta.jpg" alt="Chaqueta">
+        <div class="oferta-info">
+          <p class="oferta-titulo">Chaqueta Crop Corduroy</p>
+          <p class="oferta-precio"><span class="precio-viejo">$68.000</span> $54.400</p>
+          
+          <div class="oferta-opciones">
+            <select id="talle-chaqueta1">
+              <option value="S">Talle S</option>
+              <option value="M">Talle M</option>
+              <option value="L">Talle L</option>
+            </select>
+            <select id="color-chaqueta1">
+              <option value="Rosa">Rosa</option>
+              <option value="Negro">Negro</option>
+              <option value="Beige">Beige</option>
+            </select>
+          </div>
+          <button class="btn-agregar-oferta" onclick="agregarAlCarrito('Chaqueta Crop Corduroy', 54400, 'talle-chaqueta1', 'color-chaqueta1')">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- TARJETA 2 -->
+      <div class="oferta-card">
+        <span class="badge-oferta">OFERTA 30% OFF</span>
+        <img src="buzo2.jpg" alt="Buzo">
+        <div class="oferta-info">
+          <p class="oferta-titulo">Buzo Oversize Half-Zip NYC</p>
+          <p class="oferta-precio"><span class="precio-viejo">$55.000</span> $38.500</p>
+          
+          <div class="oferta-opciones">
+            <select id="talle-buzo2">
+              <option value="S">Talle S</option>
+              <option value="M">Talle M</option>
+              <option value="L">Talle L</option>
+            </select>
+            <select id="color-buzo2">
+              <option value="Negro">Negro</option>
+              <option value="Gris">Gris</option>
+            </select>
+          </div>
+          <button class="btn-agregar-oferta" onclick="agregarAlCarrito('Buzo Oversize Half-Zip NYC', 38500, 'talle-buzo2', 'color-buzo2')">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- TARJETA 3 -->
+      <div class="oferta-card">
+        <span class="badge-oferta">OFERTA 15% OFF</span>
+        <img src="camisa.jpg" alt="Chaqueta">
+        <div class="oferta-info">
+          <p class="oferta-titulo">Chaqueta Cuadros Cozy ESSENCE</p>
+          <p class="oferta-precio"><span class="precio-viejo">$72.000</span> $64.800</p>
+          
+          <div class="oferta-opciones">
+            <select id="talle-camisa">
+              <option value="S">Talle S</option>
+              <option value="M">Talle M</option>
+              <option value="L">Talle L</option>
+            </select>
+            <select id="color-camisa">
+              <option value="Beige">Beige</option>
+              <option value="Marrón">Marrón</option>
+            </select>
+          </div>
+          <button class="btn-agregar-oferta" onclick="agregarAlCarrito('Chaqueta Cuadros Cozy ESSENCE', 64800, 'talle-camisa', 'color-camisa')">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- TARJETA 4 -->
+      <div class="oferta-card">
+        <span class="badge-oferta">OFERTA 10% OFF</span>
+        <img src="pantalon3.jpg" alt="Pantalón">
+        <div class="oferta-info">
+          <p class="oferta-titulo">Pantalón Sastrero Wide Leg</p>
+          <p class="oferta-precio"><span class="precio-viejo">$40.000</span> $30.000</p>
+          
+          <div class="oferta-opciones">
+            <select id="talle-pantalon3">
+              <option value="36">36</option>
+              <option value="38">38</option>
+              <option value="40">40</option>
+            </select>
+            <select id="color-pantalon3">
+              <option value="Negro">Negro</option>
+              <option value="Beige">Beige</option>
+            </select>
+          </div>
+          <button class="btn-agregar-oferta" onclick="agregarAlCarrito('Pantalón Sastrero Wide Leg', 30000, 'talle-pantalon3', 'color-pantalon3')">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- TARJETA 5 -->
+      <div class="oferta-card">
+        <span class="badge-oferta">OFERTA 2x1</span>
+        <img src="pantalon4.jpg" alt="Pantalón">
+        <div class="oferta-info">
+          <p class="oferta-titulo">Jean Wide Leg Hight Waist Dark Denim</p>
+          <p class="oferta-precio"><span class="precio-viejo">$80.000</span> $35.000</p>
+          
+          <div class="oferta-opciones">
+            <select id="talle-pantalon4">
+              <option value="36">36</option>
+              <option value="38">38</option>
+              <option value="40">40</option>
+            </select>
+            <select id="color-pantalon4">
+              <option value="Azul Oscuro">Azul Oscuro</option>
+            </select>
+          </div>
+          <button class="btn-agregar-oferta" onclick="agregarAlCarrito('Jean Wide Leg Dark Denim', 35000, 'talle-pantalon4', 'color-pantalon4')">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="catalogo" class="catalogo-seccion">
+  <h2 style="text-align: center; margin: 40px 0 20px;">Prendas</h2>
+  
+  <div class="productos-grid">
+
+    <div class="producto-card">
+      <img src="sweater2.jpg" alt="Sweater" class="producto-img">
+      <h3>Sweater Off-Shoulder Ivory</h3>
+      <p class="precio">$18.000</p>
+      <div class="opciones">
+        <label for="talle-c1">Talle:</label>
+        <select id="talle-c1">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <label for="color-c1">Color:</label>
+        <select id="color-c1">
+          <option value="Blanco">Blanco</option>
+          <option value="Negro">Negro</option>
+          <option value="Negro">Gris</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Sweater Off-Shoulder Ivory', 18000, 'talle-c1', 'color-c1')">Agregar al carrito</button>
+    </div>
+
+  
+    <div class="producto-card">
+      <img src="polera2.jpg" alt="Polera" class="producto-img">
+      <h3>Polera Basic Ribbed</h3>
+      <p class="precio">$32.000</p>
+      <div class="opciones">
+        <label for="talle-c2">Talle:</label>
+        <select id="talle-c2">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <label for="color-c2">Color:</label>
+        <select id="color-c2">
+          <option value="Blanco">Blanco</option>
+          <option value="Negro">Negro</option>
+          <option value="Beige">Beige</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Polera Basic Ribbed', 32000, 'talle-c2', 'color-c2')">Agregar al carrito</button>
+    </div>
+
+    
+    <div class="producto-card">
+      <img src="polera.jpg" alt="Polera" class="producto-img">
+      <h3>Longsleeve Striped Crop</h3>
+      <p class="precio">$14.000</p>
+      <div class="opciones">
+        <label for="talle-c3">Talle:</label>
+        <select id="talle-c3">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        <label for="color-c3">Color:</label>
+        <select id="color-c3">
+          <option value="Blanco/negro/gris">Blanco/negro/gris</option>
+          <option value="Blanco/celeste/azul">Blanco/celeste/azul</option>
+          <option value="Blanco/marrón/gris">Blanco/marrón/gris</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Longsleeve Striped Crop', 14000, 'talle-c3', 'color-c3')">Agregar al carrito</button>
+    </div>
+
+   
+    <div class="producto-card">
+      <img src="sweater4.jpg" alt="Sweater" class="producto-img">
+      <h3>Sweater Stripes</h3>
+      <p class="precio">$29.000</p>
+      <div class="opciones">
+        <label for="talle-c4">Talle:</label>
+        <select id="talle-c4">
+          <option value="S">S</option>
+          <option value="M">M</option>
+        </select>
+        <label for="color-c4">Color:</label>
+        <select id="color-c4">
+          <option value="Verde">Verde</option>
+          <option value="Negro">Negro</option>
+          <option value="Azul">Azul</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Sweater Striped', 29000, 'talle-c4', 'color-c4')">Agregar al carrito</button>
+    </div>
+
+   
+    <div class="producto-card">
+      <img src="cardigan3.jpg" alt="cardigan" class="producto-img">
+      <h3>Cardigan Cropped</h3>
+      <p class="precio">$26.000</p>
+      <div class="opciones">
+        <label for="talle-c5">Talle:</label>
+        <select id="talle-c5">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        <label for="color-c5">Color:</label>
+        <select id="color-c5">
+          <option value="Blanco">Blanco</option>
+          <option value="Celeste">Celeste</option>
+          <option value="Negro">Negro</option>
+          <option value="Marrón">Marrón</option>
+          <option value="Verde">Verde</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Cardigan Cropped', 26000, 'talle-c5', 'color-c5')">Agregar al carrito</button>
+    </div>
+
+   
+    <div class="producto-card">
+      <img src="cardigan2.jpg" alt="Cardigan" class="producto-img">
+      <h3>Cardigan Crop Ribbed</h3>
+      <p class="precio">$22.000</p>
+      <div class="opciones">
+        <label for="talle-c6">Talle:</label>
+        <select id="talle-c6">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        <label for="color-c6">Color:</label>
+        <select id="color-c6">
+          <option value="Negro">Negro</option>
+          <option value="Gris">Gris</option>
+          <option value="Blanco">Blanco</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Cardigan Crop Ribbed', 22000, 'talle-c6', 'color-c6')">Agregar al carrito</button>
+    </div>
+
+    
+    <div class="producto-card">
+      <img src="sweater3.jpg" alt="Sweater" class="producto-img">
+      <h3>Sweater Cable-Knit Crop</h3>
+      <p class="precio">$42.000</p>
+      <div class="opciones">
+        <label for="talle-c7">Talle:</label>
+        <select id="talle-c7">
+          <option value="S">S</option>
+          <option value="M">M</option>
+        </select>
+        <label for="color-c7">Color:</label>
+        <select id="color-c7">
+          <option value="Beige">Beige</option>
+          <option value="Negro">Negro</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Sweater Cable-Knit Crop', 42000, 'talle-c7', 'color-c7')">Agregar al carrito</button>
+    </div>
+
+   
+    <div class="producto-card">
+      <img src="buzo.jpg" alt="Buzo" class="producto-img">
+      <h3>Buzo Cherry Oversized</h3>
+      <p class="precio">$34.000</p>
+      <div class="opciones">
+        <label for="talle-c8">Talle:</label>
+        <select id="talle-c8">
+          <option value="1">1</option>
+        </select>
+        <label for="color-c8">Color:</label>
+        <select id="color-c8">
+          <option value="Blanco">Blanco</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Buzo Cherry Oversized', 34000, 'talle-c8', 'color-c8')">Agregar al carrito</button>
+    </div>
+
+    
+    <div class="producto-card">
+      <img src="Jean1.jpg" alt="Jean" class="producto-img">
+      <h3>Jean Animal Print ESSENCE</h3>
+      <p class="precio">$16.000</p>
+      <div class="opciones">
+        <label for="talle-c9">Talle:</label>
+        <select id="talle-c9">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Jean Animal Print ESSENCE', 16000, 'talle-c9', 'color-c9')">Agregar al carrito</button>
+    </div>
+
+ 
+    <div class="producto-card">
+      <img src="jean2 (1).jpg" alt="Jean" class="producto-img">
+      <h3>Jean Cherry Light Grey</h3>
+      <p class="precio">$31.000</p>
+      <div class="opciones">
+        <label for="talle-c10">Talle:</label>
+        <select id="talle-c10">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+        <label for="color-c10">Color:</label>
+        <select id="color-c10">
+          <option value="Light Grey">Light Grey</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Jean Cherry Light Grey', 31000, 'talle-c10', 'color-c10')">Agregar al carrito</button>
+    </div>
+
+   
+    <div class="producto-card">
+      <img src="blazer.jpg" alt="Blazer" class="producto-img">
+      <h3>Blazer Crop</h3>
+      <p class="precio">$21.000</p>
+      <div class="opciones">
+        <label for="talle-c11">Talle:</label>
+        <select id="talle-c11">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        <label for="color-c11">Color:</label>
+        <select id="color-c11">
+          <option value="Rosa">Rosa</option>
+          <option value="Celeste">Celeste</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Negro">Negro</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Blazer Crop', 21000, 'talle-c11', 'color-c11')">Agregar al carrito</button>
+    </div>
+
+   
+    <div class="producto-card">
+      <img src="ropa4.jpg" alt="Campera" class="producto-img">
+      <h3>Jacket Bomber ESSENCE</h3>
+      <p class="precio">$19.500</p>
+      <div class="opciones">
+        <label for="talle-c12">Talle:</label>
+        <select id="talle-c12">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        <label for="color-c12">Color:</label>
+        <select id="color-c12">
+          <option value="Negro">Negro</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Marrón">Marrón</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Jacket Bomber ESSENCE', 19500, 'talle-c12', 'color-c12')">Agregar al carrito</button>
+    </div>
+
+
+    <div class="producto-card">
+      <img src="conjunto3 (2).jpeg" alt="conjunto"  class="producto-img">
+      <h3>Conjunto BR</h3>
+      <p class="precio">$45.000</p>
+      <div class="opciones">
+        <label for="talle-c13">Talle:</label>
+        <select id="talle-c13">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        <label for="color-c13">Color:</label>
+        <select id="color-c13">
+          <option value="Gris">Gris</option>
+          <option value="Beige">Beige</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Negro">Negro</option>
+        </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto BR', 45000, 'talle-c13', 'color-c13')">Agregar al carrito</button>
+    </div>
+
+
+    <div class="producto-card">
+      <img src="conjunto3.jpeg" alt="conjunto MIKO" class="producto-img">
+      <h3>Conjunto MIKO</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c14">Talle:</label>
+      <select id="talle-c14">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c14">Color:</label>
+      <select id="color-c14">
+        <option value="Marron">Marrón</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto MIKO', 45000, 'talle-c14', 'color-c14')">Agregar al carrito</button>
+    </div>
+      
+    
+    
+    <div class="producto-card">
+      <img src="vestido.jpeg" alt="vestido AQUA" class="producto-img">
+      <h3>Vestido AQUA</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c15">Talle:</label>
+      <select id="talle-c15">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c15">Color:</label>
+      <select id="color-c15">
+        <option value="Celeste">Celeste</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Vestido AQUA', 45000, 'talle-c15', 'color-c15')">Agregar al carrito</button>
+    </div>
+
+
+    
+    <div class="producto-card">
+      <img src="vestido2.jpeg" alt="Conjunto Paris" class="producto-img">
+      <h3>Conjunto Paris</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c16">Talle:</label>
+      <select id="talle-c16">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c16">Color:</label>
+      <select id="color-c16">
+        <option value="Blanco">Blanco</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('conjunto paris', 45000, 'talle-c16', 'color-c16')">Agregar al carrito</button>
+    </div>
+
+    
+    
+    <div class="producto-card">
+      <img src="vestido3.jpeg" alt="Vestido Jazmin" class="producto-img">
+      <h3>Vestido Jazmin</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c17">Talle:</label>
+      <select id="talle-c17">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c17">Color:</label>
+      <select id="color-c17">
+        <option value="Beige">Beige</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Vestido Jazmin', 45000, 'talle-c17', 'color-c17')">Agregar al carrito</button>
+
+    
+
+    </div>
+
+    <div class="producto-card">
+      <img src="sweater5.jpeg" alt="Sweater NAS" class="producto-img">
+      <h3>Sweater NAS</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c18">Talle:</label>
+      <select id="talle-c18">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c18">Color:</label>
+      <select id="color-c18">
+        <option value="Gris">Gris</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Sweater NAS', 45000, 'talle-c18', 'color-c18')">Agregar al carrito</button>
+    </div>
+
+
+    
+    <div class="producto-card">
+      <img src="remera.jpeg" alt="Remera Malaga" class="producto-img">
+      <h3>Remera Malaga</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c19">Talle:</label>
+      <select id="talle-c19">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c19">Color:</label>
+      <select id="color-c19">
+        <option value="Marron">Marrón</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Remera Malaga', 45000, 'talle-c19', 'color-c19')">Agregar al carrito</button>
+    </div>
+
+
+
+    
+    <div class="producto-card">
+      <img src="blusa.jpeg" alt="Blusa DAKOTA" class="producto-img">
+      <h3>Blusa DAKOTA</h3>
+      <p class="precio">$45.000</p>
+    <div class="opciones">
+      <label for="talle-c20">Talle:</label>
+      <select id="talle-c20">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c20">Color:</label>
+      <select id="color-c20">
+        <option value="Marron">Marrón</option>
+        <option value="Negro">Negro</option>
+        
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Blusa DAKOTA', 45000, 'talle-c20', 'color-c20')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto-card">
+      <img src="pantalon5.jpeg" alt="Jean Vicky" class="producto-img">
+      <h3>Jean Vicky</h3>
+      <p class="precio">$20.000</p>
+    <div class="opciones">
+      <label for="talle-c21">Talle:</label>
+      <select id="talle-c21">
+        <option value="34">34</option>
+        <option value="38">38</option>
+        <option value="40">40</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Jean Vicky', 20000, 'talle-c21', 'color-c21')">Agregar al carrito</button>
+    </div>
+
+
+    
+    <div class="producto-card">
+      <img src="conjunto5.jfif" alt="conjunto Margarita" class="producto-img">
+      <h3>Conjunto Margarita</h3>
+      <p class="precio">$30.000</p>
+    <div class="opciones">
+      <label for="talle-c22">Talle:</label>
+      <select id="talle-c22">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c22">Color:</label>
+      <select id="color-c22">
+        <option value="Amarillo">Amarillo</option>
+        <option value="Blanco">Blanco</option>
+       
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Margarita', 30000, 'talle-c22', 'color-c22')">Agregar al carrito</button>
+    </div>
+    
+    <div class="producto-card">
+      <img src="sweater6.jfif" alt="Sweater Dana" class="producto-img">
+      <h3>Sweater Dana</h3>
+      <p class="precio">$20.000</p>
+    <div class="opciones">
+      <label for="talle-c23">Talle:</label>
+      <select id="talle-c23">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c23">Color:</label>
+      <select id="color-c23">
+        <option value="Marron">Marrón</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('Sweater Dana', 20000, 'talle-c23', 'color-c23')">Agregar al carrito</button>
+    </div>
+
+
+    
+    <div class="producto-card">
+      <img src="messi.jfif" alt="#MESSIVOLVE" class="producto-img">
+      <h3>#MESSIVOLVE</h3>
+      <p class="precio">$15.000</p>
+    <div class="opciones">
+      <label for="talle-c24">Talle:</label>
+      <select id="talle-c24">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+      </select>
+      <label for="color-c24">Color:</label>
+      <select id="color-c24">
+        <option value="Celeste">Celeste</option>
+          <option value="Amarillo">Amarillo</option>
+        
+      </select>
+      </div>
+      <button class="btn-agregar" onclick="agregarAlCarrito('#MESSIVOLVE', 15000, 'talle-c24', 'color-c24')">Agregar al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+
+<div id="modal-coleccion" class="modal">
+  <div class="modal-contenido">
+    
+    <span class="cerrar-modal" onclick="cerrarColeccion()">&times;</span>
+    
+    <h2>Nuestra colección de ESSENCE para vos</h2>
+
+    <div class="productos-grid">
+      
+      
+      <div class="producto-card">
+        <img src="ropa1.jpeg" alt="Prenda 1" class="producto-img">
+        <h3>Buzo Oversize ESSENCE</h3>
+        <p class="precio">$25.000</p>
+        
+        <div class="opciones">
+          <label for="talle-1">Talle:</label>
+          <select id="talle-1">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="color-1">Color:</label>
+         <select id="color-1">
+           <option value="Negro">Negro</option>
+           <option value="Chocolate">Chocolate</option>
+           <option value="Beige">Beige</option>
+         </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Buzo Oversize ESSENCE', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+
+      
+      <div class="producto-card">
+        <img src="ropa2.jpeg" alt="Prenda 2" class="producto-img">
+        <h3>Campera Alaska</h3>
+        <p class="precio">$35.000</p>
+        
+        <div class="opciones">
+          <label for="talle-2">Talle:</label>
+          <select id="talle-2">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Campera Alaska', 30000, 'talle-2')">
+          Agregar al carrito
+        </button>
+      </div>
+      
+      <div class="producto-card">
+        <img src="cardigan.jpeg" alt="Prenda 3" class="producto-img">
+        <h3>Sweater Diagonal Collar ESSENCE</h3>
+        <p class="precio">$23.000</p>
+        
+        <div class="opciones">
+          <label for="talle-3">Talle:</label>
+          <select id="talle-3">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="color-3">Color:</label>
+         <select id="color-3">
+           <option value="Blanco">Blanco</option>
+           <option value="Chocolate">Chocolate</option>
+           <option value="Beige">Beige</option>
+         </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Sweater Diagonal Collar ESSENCE', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+    
+      
+      
+      <div class="producto-card">
+        <img src="sweater.jpeg" alt="Prenda 4" class="producto-img">
+        <h3>Sweater Oversize "Cherry"</h3>
+        <p class="precio">$20.000</p>
+        
+        <div class="opciones">
+          <label for="talle-4">Talle:</label>
+          <select id="talle-4">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Sweater Oversize Cherry ', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+      
+
+      <div class="producto-card">
+        <img src="pantalon1.jpeg" alt="Prenda 5" class="producto-img">
+        <h3>Pantalón Sastrero Wid Leg</h3>
+        <p class="precio">$30.000</p>
+        
+        <div class="opciones">
+          <label for="talle-5">Talle:</label>
+          <select id="talle-5">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="color-5">Color:</label>
+         <select id="color-5">
+           <option value="Negro">Negro</option>
+           <option value="Gris">Gris</option>
+           <option value="Beige">Beige</option>
+         </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Pantalón Sastrero Wid Leg', 5000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+      
+
+      <div class="producto-card">
+        <img src="pantalon2.jpeg" alt="Prenda 6" class="producto-img">
+        <h3>Pantalón Sastrero Fold-Over</h3>
+        <p class="precio">$24.000</p>
+        
+        <div class="opciones">
+          <label for="talle-6">Talle:</label>
+          <select id="talle-6">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="color-6">Color:</label>
+         <select id="color-6">
+           <option value="Negro">Negro</option>
+           <option value="Gris">Gris</option>
+         </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Pantalón Sastrero Fold-Over', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <div class="producto-card">
+        <img src="ropa3.jpeg" alt="Prenda 7" class="producto-img">
+        <h3>Campera Doble Face-Noir</h3>
+        <p class="precio">$28.000</p>
+        
+        <div class="opciones">
+          <label for="talle-7">Talle:</label>
+          <select id="talle-7">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Campera Doble Face-Noir', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <div class="producto-card">
+        <img src="tapado1.jpg" alt="Prenda 8" class="producto-img">
+        <h3>"Chaqueta" Abrigo Camel High Neck</h3>
+        <p class="precio">$40.000</p>
+        
+        <div class="opciones">
+          <label for="talle-8">Talle:</label>
+          <select id="talle-8">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="color-8">Color:</label>
+         <select id="color-8">
+           <option value="Negro">Negro</option>
+           <option value="Beige">Beige</option>
+         </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito(' Chaqueta Abrigo Camel High Neck', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+
+      <div class="producto-card">
+        <img src="tapado2.jpg" alt="Prenda 9" class="producto-img">
+        <h3>Tapado Faux Fur</h3>
+        <p class="precio">$27.000</p>
+        
+        <div class="opciones">
+          <label for="talle-9">Talle:</label>
+          <select id="talle-9">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <label for="color-9">Color:</label>
+         <select id="color-9">
+           <option value="Negro">Negro</option>
+           <option value="Chocolate">Chocolate</option>
+           <option value="Beige">Beige</option>
+         </select>
+        </div>
+
+        <button class="btn-agregar" onclick="agregarAlCarrito('Tapado Faux Fur', 25000, 'talle-1')">
+          Agregar al carrito
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- COLECCIÓN PRIMAVERA -->
+<div id="modal-coleccion-primavera" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarColeccionPrimavera()">&times;</span>
+    <h2>Nuestra colección de ESSENCE para vos</h2>
+    <div class="productos-grid">
+
+      <div class="producto-card">
+        <img src="bermuda.jpg" alt="Bermuda Animal Print VS" class="producto-img">
+        <h3>Bermuda Animal Print VS</h3>
+        <p class="precio">$32.000</p>
+        <div class="opciones">
+          <label for="talle-p1">Talle:</label>
+          <select id="talle-p1">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+    
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bermuda Animal Print VS', 32000, 'talle-p1', 'color-p1')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="conjunto.jpg" alt="Conjunto Romery" class="producto-img">
+        <h3>Conjunto Romery</h3>
+        <p class="precio">$45.000</p>
+        <div class="opciones">
+          <label for="talle-p2">Talle:</label>
+          <select id="talle-p2">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p2">Color:</label>
+          <select id="color-p2">
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Romery', 45000, 'talle-p2', 'color-p2')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="palazo.jpg" alt="Palazzo ABI" class="producto-img">
+        <h3>Palazzo ABI</h3>
+        <p class="precio">$36.000</p>
+        <div class="opciones">
+          <label for="talle-p3">Talle:</label>
+          <select id="talle-p3">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p3">Color:</label>
+          <select id="color-p3">
+            <option value="Negro">Negro</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Beige">Beige</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Palazzo ABI', 36000, 'talle-p3', 'color-p3')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="bermuda2.jpg" alt="Bermuda JIM" class="producto-img">
+        <h3>Bermuda JIM</h3>
+        <p class="precio">$29.000</p>
+        <div class="opciones">
+          <label for="talle-p4">Talle:</label>
+          <select id="talle-p4">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p4">Color:</label>
+          <select id="color-p4">
+            <option value="Jean Claro">Jean Claro</option>
+            <option value="Jean Oscuro">Jean Oscuro</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bermuda JIM', 29000, 'talle-p4', 'color-p4')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="palazo2.jpg" alt="Palazzo MAY" class="producto-img">
+        <h3>Palazzo MAY</h3>
+        <p class="precio">$36.000</p>
+        <div class="opciones">
+          <label for="talle-p5">Talle:</label>
+          <select id="talle-p5">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p5">Color:</label>
+          <select id="color-p5">
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Palazzo MAY', 36000, 'talle-p5', 'color-p5')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="palazo3.jpg" alt="Palazzo ANI" class="producto-img">
+        <h3>Palazzo ANI</h3>
+        <p class="precio">$36.000</p>
+        <div class="opciones">
+          <label for="talle-p6">Talle:</label>
+          <select id="talle-p6">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p6">Color:</label>
+          <select id="color-p6">
+            <option value="Negro">Negro</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Chocolate">Chocolate</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Palazzo ANI', 36000, 'talle-p6', 'color-p6')">Agregar al carrito</button>
+      </div>
+
+
+      <div class="producto-card">
+        <img src="bermuda3.jpg" alt="Bermuda ARI" class="producto-img">
+        <h3>Bermuda ARI</h3>
+        <p class="precio">$28.000</p>
+        <div class="opciones">
+          <label for="talle-p7">Talle:</label>
+          <select id="talle-p7">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p7">Color:</label>
+          <select id="color-p7">
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bermuda ARI', 28000, 'talle-p7', 'color-p7')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="short.jpg" alt="Short Campana AY" class="producto-img">
+        <h3>Short Campana AY</h3>
+        <p class="precio">$24.000</p>
+        <div class="opciones">
+          <label for="talle-p8">Talle:</label>
+          <select id="talle-p8">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p8">Color:</label>
+          <select id="color-p8">
+            <option value="Negro">Negro</option>
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Short Campana AY', 24000, 'talle-p8', 'color-p8')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="conjunto2.jpg" alt="Conjunto SOFIA" class="producto-img">
+        <h3>Conjunto SOFIA</h3>
+        <p class="precio">$42.000</p>
+        <div class="opciones">
+          <label for="talle-p9">Talle:</label>
+          <select id="talle-p9">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p9">Color:</label>
+          <select id="color-p9">
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto SOFIA', 42000, 'talle-p9', 'color-p9')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="pollera.jpg" alt="Short Pollera NVGM" class="producto-img">
+        <h3>Short Pollera NVGM</h3>
+        <p class="precio">$26.000</p>
+        <div class="opciones">
+          <label for="talle-p10">Talle:</label>
+          <select id="talle-p10">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p10">Color:</label>
+          <select id="color-p10">
+            <option value="Negro">Negro</option>
+            <option value="Gris">Gris</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Short Polera NVGM', 26000, 'talle-p10', 'color-p10')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="pollera2.jpg" alt="Short Polera ARENA" class="producto-img">
+        <h3>Short Polera ARENA</h3>
+        <p class="precio">$26.000</p>
+        <div class="opciones">
+          <label for="talle-p11">Talle:</label>
+          <select id="talle-p11">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p11">Color:</label>
+          <select id="color-p11">
+            <option value="Negro">Negro</option>
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Short Polera ARGINA', 26000, 'talle-p11', 'color-p11')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="palazo4.jpg" alt="Palazzo SUMMER" class="producto-img">
+        <h3>Palazzo SUMMER</h3>
+        <p class="precio">$38.000</p>
+        <div class="opciones">
+          <label for="talle-p12">Talle:</label>
+          <select id="talle-p12">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-p12">Color:</label>
+          <select id="color-p12">
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+            <option value="Chocolate">Chocolate</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Palazzo SUMMER', 38000, 'talle-p12', 'color-p12')">Agregar al carrito</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- COLECCIÓN VERANO -->
+<div id="modal-coleccion-verano" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar-modal" onclick="cerrarColeccionVerano()">&times;</span>
+    <h2>Colección Verano ESSENCE</h2>
+    <div class="productos-grid">
+
+      <div class="producto-card">
+        <img src="verano-01-celeste.jpg" alt="Conjunto de bikini, pareo y estrella de mar dorada" class="producto-img" id="img-v1" style="object-position: center 25%;" loading="lazy">
+        <h3>Conjunto Estrella de Mar</h3>
+        <p class="precio">$52.000</p>
+        <div class="opciones">
+          <label for="talle-v1">Talle:</label>
+          <select id="talle-v1">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v1">Color:</label>
+          <select id="color-v1" onchange="cambiarFotoColor(this, 'img-v1')">
+            <option value="Celeste" data-img="verano-01-celeste.jpg">Celeste</option>
+            <option value="Rojo" data-img="verano-01-rojo.jpg">Rojo</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Estrella de Mar', 52000, 'talle-v1', 'color-v1')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-02-top-flor.jpg" alt="Top strapless con flor dorada" class="producto-img" id="img-v2" style="object-position: center 30%;" loading="lazy">
+        <h3>Top Flor Dorada</h3>
+        <p class="precio">$24.000</p>
+        <div class="opciones">
+          <label for="talle-v2">Talle:</label>
+          <select id="talle-v2">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v2">Color:</label>
+          <select id="color-v2">
+            <option value="Rosa">Rosa</option>
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Marrón">Marrón</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Top Flor Dorada', 24000, 'talle-v2', 'color-v2')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-03-body-dorado.jpg" alt="Body de un hombro con aplique dorado" class="producto-img" id="img-v3" style="object-position: center 25%;" loading="lazy">
+        <h3>Body Hombro Dorado</h3>
+        <p class="precio">$32.000</p>
+        <div class="opciones">
+          <label for="talle-v3">Talle:</label>
+          <select id="talle-v3">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v3">Color:</label>
+          <select id="color-v3">
+            <option value="Negro">Negro</option>
+            <option value="Beige">Beige</option>
+            <option value="Marrón">Marrón</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Body Hombro Dorado', 32000, 'talle-v3', 'color-v3')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-04-conjunto-riviera.jpg" alt="Top de botones dorados con short sastrero beige" class="producto-img" id="img-v4" style="object-position: center 38%;" loading="lazy">
+        <h3>Conjunto Riviera</h3>
+        <p class="precio">$58.000</p>
+        <div class="opciones">
+          <label for="talle-v4">Talle:</label>
+          <select id="talle-v4">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v4">Color:</label>
+          <select id="color-v4">
+            <option value="Blanco y Beige">Blanco y Beige</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Riviera', 58000, 'talle-v4', 'color-v4')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-05-vestido-short.jpg" alt="Vestido short de un hombro color crema" class="producto-img" id="img-v5" style="object-position: center 40%;" loading="lazy">
+        <h3>Vestido Short Cruzado</h3>
+        <p class="precio">$46.000</p>
+        <div class="opciones">
+          <label for="talle-v5">Talle:</label>
+          <select id="talle-v5">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v5">Color:</label>
+          <select id="color-v5">
+            <option value="Crema">Crema</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Vestido Short Cruzado', 46000, 'talle-v5', 'color-v5')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-06-bikini-hibisco.jpg" alt="Bikini halter con pareo estampado de flores rosas" class="producto-img" id="img-v6" style="object-position: center;" loading="lazy">
+        <h3>Conjunto Hibisco</h3>
+        <p class="precio">$48.000</p>
+        <div class="opciones">
+          <label for="talle-v6">Talle:</label>
+          <select id="talle-v6">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v6">Color:</label>
+          <select id="color-v6">
+            <option value="Rosa estampado">Rosa estampado</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Hibisco', 48000, 'talle-v6', 'color-v6')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-07-bikini-mandarina.jpg" alt="Bikini triángulo naranja con ribetes fucsia" class="producto-img" id="img-v7" style="object-position: center;" loading="lazy">
+        <h3>Bikini Mandarina</h3>
+        <p class="precio">$30.000</p>
+        <div class="opciones">
+          <label for="talle-v7">Talle:</label>
+          <select id="talle-v7">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v7">Color:</label>
+          <select id="color-v7">
+            <option value="Naranja y fucsia">Naranja y fucsia</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bikini Mandarina', 30000, 'talle-v7', 'color-v7')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-08-conjunto-crochet.jpg" alt="Bikini halter y short de crochet color crudo" class="producto-img" id="img-v8" style="object-position: center 48%;" loading="lazy">
+        <h3>Conjunto Crochet Arena</h3>
+        <p class="precio">$54.000</p>
+        <div class="opciones">
+          <label for="talle-v8">Talle:</label>
+          <select id="talle-v8">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v8">Color:</label>
+          <select id="color-v8">
+            <option value="Crudo">Crudo</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Crochet Arena', 54000, 'talle-v8', 'color-v8')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-09-bikini-cereza.jpg" alt="Bikini de lazos rojo" class="producto-img" id="img-v9" style="object-position: center;" loading="lazy">
+        <h3>Bikini Cereza</h3>
+        <p class="precio">$28.000</p>
+        <div class="opciones">
+          <label for="talle-v9">Talle:</label>
+          <select id="talle-v9">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v9">Color:</label>
+          <select id="color-v9">
+            <option value="Rojo">Rojo</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Bikini Cereza', 28000, 'talle-v9', 'color-v9')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-10-pollera-volados.jpg" alt="Mini pollera de volados con lazos laterales" class="producto-img" id="img-v10" style="object-position: center;" loading="lazy">
+        <h3>Pollera Volados Moña</h3>
+        <p class="precio">$26.000</p>
+        <div class="opciones">
+          <label for="talle-v10">Talle:</label>
+          <select id="talle-v10">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v10">Color:</label>
+          <select id="color-v10">
+            <option value="Negro">Negro</option>
+            <option value="Bordó">Bordó</option>
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Pollera Volados Moña', 26000, 'talle-v10', 'color-v10')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-12-top-limon.jpg" alt="Top halter amarillo bordado con volados" class="producto-img" id="img-v11" style="object-position: center 40%;" loading="lazy">
+        <h3>Top Halter Limón</h3>
+        <p class="precio">$22.000</p>
+        <div class="opciones">
+          <label for="talle-v11">Talle:</label>
+          <select id="talle-v11">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v11">Color:</label>
+          <select id="color-v11">
+            <option value="Amarillo">Amarillo</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Top Halter Limón', 22000, 'talle-v11', 'color-v11')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-13-conjunto-broderie.jpg" alt="Top y mini pollera de broderie color crema" class="producto-img" id="img-v12" style="object-position: center 22%;" loading="lazy">
+        <h3>Conjunto Broderie Crema</h3>
+        <p class="precio">$60.000</p>
+        <div class="opciones">
+          <label for="talle-v12">Talle:</label>
+          <select id="talle-v12">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v12">Color:</label>
+          <select id="color-v12">
+            <option value="Crema">Crema</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Broderie Crema', 60000, 'talle-v12', 'color-v12')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-14-remera-frunce.jpg" alt="Remera ajustada con frunce lateral" class="producto-img" id="img-v13" style="object-position: center;" loading="lazy">
+        <h3>Remera Frunce Lateral</h3>
+        <p class="precio">$18.000</p>
+        <div class="opciones">
+          <label for="talle-v13">Talle:</label>
+          <select id="talle-v13">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v13">Color:</label>
+          <select id="color-v13">
+            <option value="Blanco">Blanco</option>
+            <option value="Negro">Negro</option>
+            <option value="Azul marino">Azul marino</option>
+            <option value="Marrón">Marrón</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Remera Frunce Lateral', 18000, 'talle-v13', 'color-v13')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-15-pollera-gasa.jpg" alt="Mini pollera blanca de volados asimétricos" class="producto-img" id="img-v14" style="object-position: center 55%;" loading="lazy">
+        <h3>Pollera Volados Gasa</h3>
+        <p class="precio">$29.000</p>
+        <div class="opciones">
+          <label for="talle-v14">Talle:</label>
+          <select id="talle-v14">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v14">Color:</label>
+          <select id="color-v14">
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Pollera Volados Gasa', 29000, 'talle-v14', 'color-v14')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-16-conjunto-rayas.jpg" alt="Top halter y short de rayas amarillas" class="producto-img" id="img-v15" style="object-position: center 35%;" loading="lazy">
+        <h3>Conjunto Rayas Limón</h3>
+        <p class="precio">$49.000</p>
+        <div class="opciones">
+          <label for="talle-v15">Talle:</label>
+          <select id="talle-v15">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v15">Color:</label>
+          <select id="color-v15">
+            <option value="Amarillo rayado">Amarillo rayado</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Rayas Limón', 49000, 'talle-v15', 'color-v15')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-17-vestido-halter.jpg" alt="Vestido halter corto color vainilla con volado" class="producto-img" id="img-v16" style="object-position: center 35%;" loading="lazy">
+        <h3>Vestido Halter Vainilla</h3>
+        <p class="precio">$44.000</p>
+        <div class="opciones">
+          <label for="talle-v16">Talle:</label>
+          <select id="talle-v16">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v16">Color:</label>
+          <select id="color-v16">
+            <option value="Vainilla">Vainilla</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Vestido Halter Vainilla', 44000, 'talle-v16', 'color-v16')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-18-conjunto-brisa.jpg" alt="Top asimétrico de mangas amplias con pollera con nudo" class="producto-img" id="img-v17" style="object-position: center 40%;" loading="lazy">
+        <h3>Conjunto Brisa</h3>
+        <p class="precio">$56.000</p>
+        <div class="opciones">
+          <label for="talle-v17">Talle:</label>
+          <select id="talle-v17">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v17">Color:</label>
+          <select id="color-v17">
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Conjunto Brisa', 56000, 'talle-v17', 'color-v17')">Agregar al carrito</button>
+      </div>
+
+      <div class="producto-card">
+        <img src="verano-19-top-encaje.jpg" alt="Top halter de encaje con moño frontal" class="producto-img" id="img-v18" style="object-position: center 35%;" loading="lazy">
+        <h3>Top Halter Encaje</h3>
+        <p class="precio">$23.000</p>
+        <div class="opciones">
+          <label for="talle-v18">Talle:</label>
+          <select id="talle-v18">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label for="color-v18">Color:</label>
+          <select id="color-v18">
+            <option value="Blanco">Blanco</option>
+          </select>
+        </div>
+        <button class="btn-agregar" onclick="agregarAlCarrito('Top Halter Encaje', 23000, 'talle-v18', 'color-v18')">Agregar al carrito</button>
+      </div>
+
+      <!-- Para agregar más prendas, copiá un bloque <div class="producto-card"> completo
+           y cambiá el número (v19, v20...) en los id, los for y el onclick. -->
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== OPINIONES ===================== -->
+<section id="opiniones" class="seccion-opiniones" aria-labelledby="titulo-opiniones">
+  <h2 id="titulo-opiniones">Opiniones de nuestras clientas</h2>
+  <p class="opiniones-sub">Tu opinión nos ayuda a seguir mejorando ♡</p>
+
+  <div class="opiniones-layout">
+    <aside class="tarjeta-op resumen-op" id="resumen-opiniones" aria-label="Resumen de puntuaciones"></aside>
+
+    <div class="tarjeta-op opinion-form" id="bloque-form">
+
+      <!-- Sin sesión -->
+      <div class="invitacion" id="form-invitada">
+        <div class="icono" aria-hidden="true">✨</div>
+        <h3>Contanos tu experiencia</h3>
+        <p>Iniciá sesión para puntuar con estrellas y dejar tu comentario. Podés elegir mostrar tu usuario o publicar de forma anónima.</p>
+        <div class="botones">
+          <button type="button" class="btn-comprar" id="btn-invitada-login">Iniciar sesión</button>
+          <button type="button" class="btn-secundario" id="btn-invitada-registro">Crear cuenta</button>
+        </div>
+      </div>
+
+      <!-- Ya dejó su opinión -->
+      <div class="invitacion" id="opinion-hecha" hidden>
+        <div class="icono" aria-hidden="true">🤍</div>
+        <h3>¡Gracias por tu opinión!</h3>
+        <p>Ya compartiste tu experiencia con ESSENCE. Si cambiaste de idea, podés editarla cuando quieras.</p>
+        <div class="botones">
+          <button type="button" class="btn-secundario" id="btn-editar-mia">Editar mi opinión</button>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <form id="form-opinion" novalidate hidden>
+        <h3 id="form-titulo">Dejá tu opinión</h3>
+
+        <fieldset>
+          <legend>Tu puntuación</legend>
+          <div class="estrellas-radios">
+            <input type="radio" name="puntaje" id="est5" value="5"><label for="est5" title="Excelente"><span class="sr-only">5 estrellas</span>★</label>
+            <input type="radio" name="puntaje" id="est4" value="4"><label for="est4" title="Muy buena"><span class="sr-only">4 estrellas</span>★</label>
+            <input type="radio" name="puntaje" id="est3" value="3"><label for="est3" title="Buena"><span class="sr-only">3 estrellas</span>★</label>
+            <input type="radio" name="puntaje" id="est2" value="2"><label for="est2" title="Regular"><span class="sr-only">2 estrellas</span>★</label>
+            <input type="radio" name="puntaje" id="est1" value="1"><label for="est1" title="Mala"><span class="sr-only">1 estrella</span>★</label>
+          </div>
+          <span class="puntaje-texto" id="puntaje-texto" aria-live="polite"></span>
+        </fieldset>
+
+        <div class="campo">
+          <label for="op-comentario">Tu comentario</label>
+          <textarea id="op-comentario" maxlength="500" rows="4" placeholder="Contanos cómo fue tu experiencia con las prendas, la atención, el envío..."></textarea>
+          <small class="contador"><span id="op-contador">0</span>/500</small>
+        </div>
+
+        <fieldset class="visibilidad">
+          <legend>¿Cómo querés aparecer?</legend>
+          <label><input type="radio" name="visibilidad" value="usuario" checked>
+            <span>Mostrar mi usuario <strong id="op-nombre-preview"></strong></span></label>
+          <label><input type="radio" name="visibilidad" value="anonimo">
+            <span>Publicar de forma anónima <small>Nadie verá tu nombre</small></span></label>
+        </fieldset>
+
+        <p id="error-opinion" class="error-form" role="alert"></p>
+        <div class="botones-paso">
+          <button type="button" class="btn-secundario" id="btn-cancelar-edicion" hidden>Cancelar</button>
+          <button type="submit" class="btn-comprar" id="btn-publicar">Publicar opinión</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="opiniones-lista-wrap">
+    <div class="opiniones-toolbar">
+      <div class="toolbar-izq">
+        <span id="conteo-opiniones" class="conteo-op" aria-live="polite"></span>
+        <button type="button" class="chip-filtro" id="btn-quitar-filtro" hidden></button>
+      </div>
+      <label class="orden-op">Ordenar por
+        <select id="orden-opiniones">
+          <option value="recientes">Más recientes</option>
+          <option value="mejores">Mejor puntuadas</option>
+          <option value="peores">Peor puntuadas</option>
+        </select>
+      </label>
+    </div>
+    <div id="lista-opiniones"></div>
+    <div class="ver-mas-wrap"><button type="button" class="btn-secundario" id="btn-ver-mas" hidden>Ver más opiniones</button></div>
+  </div>
+</section>
+
+<!-- ===================== LOGIN / REGISTRO ===================== -->
+<div id="modal-auth" class="modal" role="dialog" aria-modal="true" aria-labelledby="auth-titulo">
+  <div class="modal-contenido modal-auth-contenido">
+    <button type="button" class="cerrar-modal" id="auth-cerrar" aria-label="Cerrar">&times;</button>
+    <div class="auth-marca">ESSENCE</div>
+    <h2 id="auth-titulo">Bienvenida</h2>
+    <p class="auth-sub" id="auth-sub">Ingresá a tu cuenta para dejar tu opinión.</p>
+
+    <div class="auth-tabs" role="tablist">
+      <button type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="form-login">Ingresar</button>
+      <button type="button" role="tab" id="tab-registro" aria-selected="false" aria-controls="form-registro">Crear cuenta</button>
+    </div>
+
+    <form id="form-login" novalidate>
+      <div class="campo">
+        <label for="login-ident">Usuario o email</label>
+        <input type="text" id="login-ident" autocomplete="username">
+      </div>
+      <div class="campo">
+        <label for="login-clave">Contraseña</label>
+        <div class="campo-clave">
+          <input type="password" id="login-clave" autocomplete="current-password">
+          <button type="button" class="btn-ver-clave" data-target="login-clave">Mostrar</button>
+        </div>
+      </div>
+      <p id="error-login" class="error-form" role="alert"></p>
+      <button type="submit" class="btn-comprar btn-ancho">Ingresar</button>
+      <p class="auth-cambio">¿Todavía no tenés cuenta? <button type="button" class="link-btn" data-ir="registro">Creá una</button></p>
+    </form>
+
+    <form id="form-registro" novalidate hidden>
+      <div class="campo">
+        <label for="reg-usuario">Nombre de usuario</label>
+        <input type="text" id="reg-usuario" autocomplete="username" maxlength="20">
+        <small class="ayuda">3 a 20 caracteres: letras, números, punto o guion bajo.</small>
+      </div>
+      <div class="campo">
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" autocomplete="email">
+      </div>
+      <div class="campo">
+        <label for="reg-clave">Contraseña</label>
+        <div class="campo-clave">
+          <input type="password" id="reg-clave" autocomplete="new-password">
+          <button type="button" class="btn-ver-clave" data-target="reg-clave">Mostrar</button>
+        </div>
+        <small class="ayuda">Mínimo 6 caracteres.</small>
+      </div>
+      <div class="campo">
+        <label for="reg-clave2">Repetir contraseña</label>
+        <input type="password" id="reg-clave2" autocomplete="new-password">
+      </div>
+      <p id="error-registro" class="error-form" role="alert"></p>
+      <button type="submit" class="btn-comprar btn-ancho">Crear cuenta</button>
+      <p class="auth-cambio">¿Ya tenés cuenta? <button type="button" class="link-btn" data-ir="login">Ingresá</button></p>
+    </form>
+  </div>
+</div>
+
+<div id="modal-carrito" class="modal">
+  <div class="modal-contenido modal-carrito-contenido">
+    <span class="cerrar-modal" onclick="cerrarCarrito()">&times;</span>
+    <h2>Tu Carrito</h2>
+
+    <!-- Indicador de pasos -->
+    <ol class="pasos-compra" id="pasos-compra">
+      <li class="activo">1. Carrito</li>
+      <li>2. Datos y envío</li>
+      <li>3. Pago</li>
+      <li>4. Confirmación</li>
+    </ol>
+
+    <!-- PASO 1: CARRITO -->
+    <div class="paso" id="paso-1">
+      <div id="lista-carrito"></div>
+
+      <div class="seccion-envio">
+        <p class="seccion-titulo">Calcular envío</p>
+        <div class="fila-cp">
+          <input type="text" id="input-cp" inputmode="numeric" maxlength="8" placeholder="Código postal. Ej: 1646">
+          <button type="button" class="btn-secundario" onclick="calcularEnvio()">Calcular</button>
+        </div>
+        <p id="resultado-envio" class="resultado-envio"></p>
+      </div>
+
+      <div class="resumen-montos">
+        <p>Subtotal: $<span id="subtotal-precio">0</span></p>
+        <p>Envío: <span id="envio-precio">—</span></p>
+        <p class="total-carrito">Total: $<span id="total-precio">0</span></p>
+      </div>
+
+      <button type="button" class="btn-comprar" onclick="irAPaso(2)">Continuar con la compra</button>
+    </div>
+
+    <!-- PASO 2: DATOS Y ENVÍO -->
+    <form class="paso" id="paso-2" style="display:none" onsubmit="event.preventDefault(); validarDatos();">
+      <div class="campo"><label for="cli-nombre">Nombre y apellido</label>
+        <input type="text" id="cli-nombre" autocomplete="name"></div>
+      <div class="campo"><label for="cli-email">Email</label>
+        <input type="email" id="cli-email" autocomplete="email"></div>
+      <div class="campo"><label for="cli-tel">Teléfono</label>
+        <input type="tel" id="cli-tel" autocomplete="tel"></div>
+
+      <div class="campo">
+        <label>Entrega</label>
+        <div class="opciones-radio">
+          <label><input type="radio" name="entrega" value="envio" checked onchange="cambiarEntrega()"> Envío a domicilio</label>
+          <label><input type="radio" name="entrega" value="retiro" onchange="cambiarEntrega()"> Retiro en persona (gratis)</label>
+        </div>
+      </div>
+
+      <div id="bloque-domicilio">
+        <div class="campo"><label for="cli-direccion">Dirección (calle y número)</label>
+          <input type="text" id="cli-direccion" autocomplete="street-address"></div>
+        <div class="fila-doble">
+          <div class="campo"><label for="cli-ciudad">Ciudad</label>
+            <input type="text" id="cli-ciudad" autocomplete="address-level2"></div>
+          <div class="campo"><label for="cli-cp">Código postal</label>
+            <input type="text" id="cli-cp" inputmode="numeric" maxlength="8" autocomplete="postal-code" onchange="sincronizarCP()"></div>
+        </div>
+      </div>
+
+      <p id="error-datos" class="error-form"></p>
+      <div class="botones-paso">
+        <button type="button" class="btn-secundario" onclick="irAPaso(1)">Volver</button>
+        <button type="submit" class="btn-comprar">Continuar al pago</button>
+      </div>
+    </form>
+
+    <!-- PASO 3: PAGO -->
+    <div class="paso" id="paso-3" style="display:none">
+      <div class="campo">
+        <label>Medio de pago</label>
+        <div class="opciones-radio">
+          <label><input type="radio" name="pago" value="transferencia" checked onchange="actualizarResumenFinal()"> Transferencia bancaria (10% OFF)</label>
+          <label><input type="radio" name="pago" value="tarjeta" onchange="actualizarResumenFinal()"> Tarjeta de crédito/débito</label>
+        </div>
+      </div>
+      <div id="resumen-final" class="resumen-montos"></div>
+      <div class="botones-paso">
+        <button type="button" class="btn-secundario" onclick="irAPaso(2)">Volver</button>
+        <button type="button" class="btn-comprar" onclick="confirmarCompra()">Confirmar compra</button>
+      </div>
+    </div>
+
+    <!-- PASO 4: CONFIRMACIÓN -->
+    <div class="paso" id="paso-4" style="display:none; text-align:center;">
+      <h3>¡Gracias por tu compra en ESSENCE! 🤍</h3>
+      <p id="confirmacion-detalle"></p>
+      <button type="button" class="btn-comprar" onclick="finalizarYCerrar()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="chatbot-flotante" onclick="toggleChatbot()">
+  💬 <span class="chatbot-badge">IA</span>
+</div>
+
+
+<div id="chatbot-container" class="chatbot-oculto">
+  <div class="chatbot-header">
+    <div class="chatbot-titulo">
+      <span>✨ Asistente ESSENCE</span>
+    </div>
+    <span class="cerrar-chatbot" onclick="toggleChatbot()">&times;</span>
+  </div>
+  
+  <div id="chatbot-messages" class="chatbot-messages">
+    <div class="mensaje bot">
+      ¡Hola! 👋 Soy el asistente de ESSENCE. ¿Te puedo ayudar a elegir tu talle, consultar sobre los envíos o encontrar alguna prenda de Invierno, Primavera o Verano?
+    </div>
+  </div>
+
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Escribí tu consulta..." onkeypress="evaluarEnter(event)">
+    <button onclick="enviarMensajeChatbot()">Enviar</button>
+  </div>
+</div>
+
+
+
+<footer id="contacto" class="site-footer">
+  <div class="footer-content">
+  
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📩 contacto@essencestore.com</p>
+      <p>📷 Instagram: @essence.store</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Medios de Pago</h4>
+      <p>💳 Tarjetas de crédito/débito</p>
+      <p>💵 Transferencia bancaria (10% OFF)</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>ESSENCE - La elegancia de lo esencial ♡ - 2026</p>
+  </div>
+</footer>
+
+
+
+  <script src="script.js"></script>
+  <script src="resenas.js"></script>
+</body>
+</html>
